@@ -728,6 +728,7 @@ main{
   margin: 50px 0 20px 0;
   padding: 60px 20px 80px 20px;
   background: @primaryColor;
+  .bxshd(inset 0 0 8px -4px rgba(33, 33, 33, 0.75));
 }
 
 .container__title {
@@ -813,11 +814,29 @@ main{
   background: none;
 }
 
+.container--pallax{
+  align-items: center;
+  position: relative;
+  background: transparent;
+  .bxshd(inset 0 0 8px -4px rgba(33, 33, 33, 0.75));
+}
 
+.container__black-area{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(25, 118, 210, 0.2);
+}
 
+.container__title--parallax{
+  z-index: 1;
+}
 
-
-
+.form--parallax{
+  z-index: 1;
+}
 
 
 

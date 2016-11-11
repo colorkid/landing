@@ -12,6 +12,7 @@
 	<script src="less.js" type="text/javascript"></script>
 	<script src="libs/jquery-1.12.3.min.js" type="text/javascript"></script>
 	<script src="libs/wave.js" type="text/javascript"></script>
+	<script src="libs/parallax.min.js" type="text/javascript"></script>
 </head>
  	<body>
  		<input class="menu-checkbox" id="menu-checkbox" type="checkbox">
@@ -99,6 +100,20 @@
 				<span class="products-title" id="suss">Сушилки для посуды</span>
 				<span class="products-description">Сушилки для посуды от 880 р.</span>
 				<section class="products" id="sus"></section>
+			</div>
+			<div class="container container--pallax">
+				<div class="container__black-area"></div>
+				<div class="container__title container__title--parallax">Заказы сделанные до 14:00 - <span class="container__accent-word">доставляются сегодня!</span></div>
+				<form action="form.php" method="post" class="form form--parallax">
+					<input type="text" class="form__field form__field--parallax" placeholder="Введите Ваше имя" name="contact_name">
+					<input type="text" class="form__field form__field--parallax" placeholder="Введите Ваш телефон" name="contact_tel">
+					<input type="hidden" name="product" value="Обратная связь">
+					<div class="wrapper-for-button wrapper-for-button--parallax">
+						<input type="submit" value="Заказать" class="form__button form__button--parralax wave">
+					</div>
+				</form>
+			</div>
+			<div class="wrapper">
 				<span class="products-title" id="stos">Столешницы для кухни</span>
 				<span class="products-description">Столешницы для кухни от 1900 р.</span>
 				<section class="products" id="sto"></section>
@@ -128,5 +143,8 @@
 		<script src="js/wave.js" type="text/javascript"></script>
 		<script src="js/menu.js" type="text/javascript"></script>
 		<script src="js/main.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$('.container--pallax').parallax({imageSrc: 'img/delivery.jpg', naturalWidth: '100%'});
+		</script>
 	</body>
 </html>
