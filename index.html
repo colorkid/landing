@@ -43,7 +43,7 @@
 		<main>
 			<section class="first-view">
 				<h1>Собери вcю кухню в одном месте!</h1>
-				<div class="first-view__background"></div>
+				<!--<div class="first-view__background"></div>-->
 				<div class="first-view__black"></div>
 			</section>
 			<section class="triggers" id="sticky">
@@ -144,6 +144,7 @@
 		<script src="js/menu.js" type="text/javascript"></script>
 		<script src="js/main.js" type="text/javascript"></script>
 		<script type="text/javascript">
+			$('.first-view').parallax({imageSrc: 'img/kit2.jpg', naturalWidth: '100%'});
 			$('.container--parallax').parallax({imageSrc: 'img/delivery.jpg', naturalWidth: '100%'});
 		</script>
 	</body>
