@@ -501,8 +501,20 @@ main{
   color: @primaryTextColor;
   cursor: pointer;
   position: relative;
+}
 
-  &:hover{
+.product__footer{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.product__icon{
+  cursor: pointer;
+
+  &:hover i{
     color: @accentColor;
   }
 }
@@ -510,7 +522,6 @@ main{
 .product__price{
   display: block;
   width: 100%;
-  margin-top: 10px;
   text-align: right;
   text-transform: uppercase;
   font-weight: 300;

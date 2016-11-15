@@ -54,15 +54,15 @@ var body = document.querySelector("body");
 
 		showPage();
 
-		var productForClick = document.querySelectorAll(".product__more");
+		var productForClick = document.querySelectorAll(".product__icon");
 
 		for (var i = 0; i < productForClick.length; i++){	
 
-			if(productForClick[i].previousElementSibling.dataset.photos.split(',').length > 1){
+			if(productForClick[i].parentElement.previousElementSibling.previousElementSibling.dataset.photos.split(',').length > 1){
 				//создание переключателя картики превью
 				var toggle = document.createElement("div");
 				toggle.className = "toggle";
-				productForClick[i].previousElementSibling.appendChild(toggle);
+				productForClick[i].parentElement.previousElementSibling.previousElementSibling.appendChild(toggle);
 
 				var toggleLeft = document.createElement("div");
 				toggleLeft.className = "toggle__left";
@@ -103,13 +103,13 @@ var body = document.querySelector("body");
 
 
 				//Преобразование списка картинок в массив
-				var photos = this.previousElementSibling.dataset.photos;
+				var photos = this.parentElement.previousElementSibling.previousElementSibling.dataset.photos;
 				var photosArray = photos.split(',');
 
 				//Информация из JSON в DataSet помещенная в переменные для вставки в карточку
-				var name = this.previousElementSibling.dataset.name;
-				var description = this.previousElementSibling.dataset.description;
-				var price = this.previousElementSibling.dataset.price;
+				var name = this.parentElement.previousElementSibling.previousElementSibling.dataset.name;
+				var description = this.parentElement.previousElementSibling.previousElementSibling.dataset.description;
+				var price = this.parentElement.previousElementSibling.previousElementSibling.dataset.price;
 
 
 				//Изображения для слайдера
