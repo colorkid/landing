@@ -512,7 +512,12 @@ main{
 }
 
 .product__icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
   cursor: pointer;
+  color: @secondaryTextColor;
 
   &:hover i{
     color: @accentColor;
@@ -1123,9 +1128,9 @@ main{
   h1{
     font-size: 38px;
   }
-  .products{
+  /*.products{
     justify-content: space-between;
-  }
+  }*/
   /*.product{
     flex-grow: 1;
     width: 22.5%;
@@ -1148,7 +1153,7 @@ main{
   .popup-card__description{
 
   }
-  .wrapper{
+  /*.wrapper{
     padding: 10px;
   }
   .products-title{
@@ -1156,7 +1161,7 @@ main{
   }
   .products-description{
     padding: 7.5px 10px;
-  }
+  }*/
   .container__title{
     font-size: 38px;
   }
@@ -1210,9 +1215,10 @@ main{
 }
 
 @media (max-width: 640px){
-  .products{
+  /*.products{
     justify-content: space-between;
-  }/*
+  }
+  *//*
   .product{
     width: 45%;
     max-width: 285px;
@@ -1275,6 +1281,13 @@ main{
     max-width: 100%;
     margin: 5px;
   }*/
+  .products{
+    justify-content: space-between;
+  }
+  .product{
+    width: 47.5%;
+    margin: 10px 0;
+  }
 }
 
 @media (orientation: landscape) and (max-width: 640px) {
