@@ -66,12 +66,12 @@ var body = document.querySelector("body");
 
 				var toggleLeft = document.createElement("div");
 				toggleLeft.className = "toggle__left";
-				toggleLeft.innerHTML = '<i class="fa fa-angle-left" aria-hidden="true"></i>';
+				toggleLeft.innerHTML = '<i class="material-icons">chevron_left</i>';
 				toggle.appendChild(toggleLeft);
 
 				var toggleRight = document.createElement("div");
 				toggleRight.className = "toggle__right";
-				toggleRight.innerHTML = '<i class="fa fa-angle-right" aria-hidden="true"></i>';
+				toggleRight.innerHTML = '<i class="material-icons">chevron_right</i>';
 				toggle.appendChild(toggleRight);
 			}
 
