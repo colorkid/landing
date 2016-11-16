@@ -1082,7 +1082,6 @@ main{
   }
   .menu-checkbox:checked ~ .great-header{
     left: 0;
-    overflow-y: scroll;
     .transition(0.2s);
 
     .logo{
@@ -1298,6 +1297,9 @@ main{
 
 @media (max-height: 540px){
   .popup-card__card{
+  }
+  .great-header{
+    overflow-y: scroll;
   }
   .great-header__home{
     padding: 20px;
