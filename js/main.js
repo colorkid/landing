@@ -232,26 +232,39 @@ var body = document.querySelector("body");
 
 
 		//переключение картинки превью
-		var indexSrc = 0;
+		var productPicForIndexData = document.querySelectorAll('.product__pic');
+
+		for(var i = 0; i < productPicForIndexData.length; i++){
+			productPicForIndexData[i].dataset.index = 0;
+		}
+
 		var toggleRightForClick = $(".toggle__right");
 		var toggleleftForClick = $(".toggle__left");
 
 		toggleRightForClick.click(function (){
-			indexSrc++;
+			
+			this.parentElement.parentElement.dataset.index++;
+			
 			var srcImg = $(this).parent().parent().attr('data-photos');
 			var srcImgArray = srcImg.split(',');
-			if(indexSrc >= srcImgArray.length){
-				indexSrc = 0;
+
+			if(this.parentElement.parentElement.dataset.index >= srcImgArray.length){
+				this.parentElement.parentElement.dataset.index = 0;
 			}
-			var previewFotoChange = $(this).parent().prev().attr("src", "img/" + srcImgArray[indexSrc]);
+
+			var previewFotoChange = $(this).parent().prev().attr("src", "img/" + srcImgArray[this.parentElement.parentElement.dataset.index]);
 		});
 
 		toggleleftForClick.click(function (){
-			indexSrc--;
+			
+			this.parentElement.parentElement.dataset.index--;
+			
 			var srcImg = $(this).parent().parent().attr('data-photos');
 			var srcImgArray = srcImg.split(',');
-			if(indexSrc <= 0){
-				indexSrc = srcImgArray.length - 1;
+
+			if(this.parentElement.parentElement.dataset.index == -1){
+				this.parentElement.parentElement.dataset.index = srcImgArray.length - 1;
 			}
-		   var previewFotoChange = $(this).parent().prev().attr("src", "img/" + srcImgArray[indexSrc]);
+
+		    var previewFotoChange = $(this).parent().prev().attr("src", "img/" + srcImgArray[this.parentElement.parentElement.dataset.index]);
 		});
