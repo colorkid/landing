@@ -242,11 +242,7 @@ var body = document.querySelector("body");
 		var toggleleftForClick = $(".toggle__left");
 
 		toggleRightForClick.click(function (){
-<<<<<<< HEAD
-			var objectTest = {};		
-=======
-	
->>>>>>> master
+
 			this.parentElement.parentElement.dataset.index++;
 	
 			var srcImg = $(this).parent().parent().attr('data-photos');
