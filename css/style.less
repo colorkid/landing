@@ -1082,6 +1082,7 @@ main{
   }
   .menu-checkbox:checked ~ .great-header{
     left: 0;
+    overflow-y: scroll;
     .transition(0.2s);
 
     .logo{
@@ -1141,7 +1142,7 @@ main{
     }
   }*/
   .popup-card{
-    z-index: 3;
+    z-index: 4;
   }
   .popup-card__card{
     align-content: center;
@@ -1295,8 +1296,12 @@ main{
   }
 }
 
-@media (max-height: 480px){
+@media (max-height: 540px){
   .popup-card__card{
+  }
+  .great-header__home{
+    padding: 20px;
+    margin: 0;
   }
 }
 
