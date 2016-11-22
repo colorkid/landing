@@ -864,13 +864,58 @@ main{
   z-index: 1;
 }
 
+.arguments-area{
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
 
+.arguments {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 525px;
+}
 
+.argument {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+  padding: 20px;
+  .brd(2px);
+  box-sizing: border-box;
+  background: #eeeeee;
+  .materialStaticShadow;
+}
 
+.argument__title{
+  width: 100%;
+  margin-bottom: 5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: @secondaryTextColor;
+}
 
+.argument__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44px;
+  font-weight: 600;
+  color: @accentColor;
+  text-shadow: 2px 2px 3px rgba(33, 33, 33, 0.5);
+}
 
+.argument__right {
+  padding-left: 15px;
+}
 
-
+.argument__description{
+  color: @secondaryTextColor;
+}
 
 
 
