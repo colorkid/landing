@@ -871,49 +871,70 @@ main{
   flex-wrap: wrap;
 }
 
+.container--arguments{
+  background: none;
+  .bxshd(none);
+}
+
+.container__title--arguments{
+  color: @accentColor;
+}
+
 .arguments {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   width: 100%;
-  max-width: 525px;
 }
 
 .argument {
   display: flex;
-  align-items: center;
-  width: 100%;
-  margin: 10px 0;
-  padding: 20px;
-  .brd(2px);
+  flex-wrap: wrap;
+  width: 290px;
+  margin: 0 10px;
   box-sizing: border-box;
-  background: #eeeeee;
+  .brd(2px);
+  background: #fff;
   .materialStaticShadow;
 }
 
-.argument__title{
+.argument__pic{
+  display: block;
   width: 100%;
-  margin-bottom: 5px;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 20px;
-  color: @secondaryTextColor;
+  height: 180px;
+  border-bottom: 1px solid @dividerColor;
+  background-repeat: no-repeat;
+  background-position: 10%;
+  background-size: cover;
+}
+
+.argument__pic--delivery{
+  background-image: url("../img/delivery-card.jpg");
+}
+
+.argument__pic--free{
+  background-image: url("../img/freepay.jpg");
+}
+
+.argument__pic--low-price{
+  background-image: url("../img/lowprice.jpg");
+}
+
+.argument__title{
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 .argument__number {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 44px;
-  font-weight: 600;
-  color: @accentColor;
-  text-shadow: 2px 2px 3px rgba(33, 33, 33, 0.5);
+
 }
 
-.argument__right {
-  padding-left: 15px;
+.argument__footer {
+  padding: 20px;
 }
 
 .argument__description{
+  line-height: 20px;
   color: @secondaryTextColor;
 }
 
