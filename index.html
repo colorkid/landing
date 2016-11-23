@@ -128,24 +128,32 @@
 						<header class="argument__pic argument__pic--delivery"></header>
 						<footer class="argument__footer">
 							<div class="argument__title">Доставка в день заказа</div>
-							<p class="argument__description">Своя логистика обеспечивает быструю доставку</p>
+							<p class="argument__description">Если заказ сделан до 14:00, то у Вас есть возможность принять доставку уже сегодня.</p>
 						</footer>
 					</li>
 					<li class="argument">
 						<header class="argument__pic argument__pic--free"></header>
 						<footer class="argument__footer">
 							<div class="argument__title">Доставка без предоплаты </div>
-							<p class="argument__description">Доставляем по звонку без внесения гарантированного платежа</p>
+							<p class="argument__description">Для оформления доставки не нужно вносить предоплату, нам нужно лишь Ваше желание принять доставку.</p>
 						</footer>
 					</li>
 					<li class="argument">
 						<header class="argument__pic argument__pic--low-price"></header>
 						<footer class="argument__footer">
 							<div class="argument__title">Самая низкая цена по рынку </div>
-							<p class="argument__description">Оптовые объемы продаж позволяют снижать цены до минимума</p>
+							<p class="argument__description">Мониторим конкурентов и держим свои цены ниже всех. Увидели где-то дешевле, звоните - договоримся.</p>
 						</footer>
 					</li>
 				</ul>
+				<form action="form.php" method="post" class="form form--argument">
+					<input type="text" class="form__field form__field--argument" placeholder="Ваше имя" name="contact_name">
+					<input type="text" class="form__field form__field--argument" placeholder="Ваш телефон" name="contact_tel">
+					<input type="hidden" name="product" value="Обратная связь">
+					<div class="wrapper-for-button wrapper-for-button--argument">
+						<input type="submit" value="Заказать" class="form__button form__button--argument wave">
+					</div>
+				</form>
 			</div>
 			<div class="wrapper">
 				<span class="products-title" id="mods">Модули для кухни</span>

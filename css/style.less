@@ -872,12 +872,16 @@ main{
 }
 
 .container--arguments{
-  background: none;
-  .bxshd(none);
+
+}
+
+.container__black-area--white{
+  
 }
 
 .container__title--arguments{
-  color: @accentColor;
+  color: #fff;
+  z-index: 1;
 }
 
 .arguments {
@@ -888,13 +892,15 @@ main{
 
 .argument {
   display: flex;
+  align-content: flex-start;
   flex-wrap: wrap;
   width: 290px;
   margin: 0 10px;
   box-sizing: border-box;
   .brd(2px);
   background: #fff;
-  .materialStaticShadow;
+  .activeShadowBig;
+  z-index: 1;
 }
 
 .argument__pic{
@@ -938,9 +944,20 @@ main{
   color: @secondaryTextColor;
 }
 
+.form--argument{
+  justify-content: center;
+  margin-top: 20px;
+}
 
+.form__field--argument{
+  width: 290px;
+  margin: 0 10px;
+}
 
-
+.wrapper-for-button--argument{
+  width: 290px;
+  margin: 0 10px;
+}
 
 
 
@@ -1056,6 +1073,14 @@ main{
   .trigger__right {
     width: 100%;
     margin-top: 10px;
+  }
+  .argument,
+  .form__field--argument,
+  .wrapper-for-button--argument{
+    width: 30%;
+  }
+  .form--argument{
+    max-width: 100%;
   }
 }
 
@@ -1334,6 +1359,19 @@ main{
   .products-description{
     padding: 7.5px 0;
   }
+  .arguments{
+    flex-wrap: wrap;
+  }
+  .argument{
+    margin: 10px;
+  }
+  .wrapper-for-button--argument{
+  }
+  .argument,
+  .form__field--argument,
+  .wrapper-for-button--argument{
+    width: 100%
+  }
 }
 
 @media (max-width: 480px){
@@ -1373,6 +1411,15 @@ main{
   }
   .great-header__home{
     padding: 20px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 360px){
+  .argument {
+    margin: 10px 0;
+  }
+  .wrapper-for-button--argument{
     margin: 0;
   }
 }
