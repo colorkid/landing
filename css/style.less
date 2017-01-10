@@ -872,7 +872,9 @@ main{
 }
 
 .container--arguments{
-  background-image: linear-gradient(to bottom, @primaryColor, @darkPrimaryColor);
+ /* background-image: linear-gradient(to bottom, @primaryColor, @darkPrimaryColor);*/
+ 	background-image: none;
+ 	.bxshd(none);
 }
 
 .container__black-area--white{
@@ -880,49 +882,53 @@ main{
 }
 
 .container__title--arguments{
-  color: #fff;
+  color: @darkPrimaryColor;
+  text-shadow: none;
   z-index: 1;
 }
 
 .arguments {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
+  max-width: 1180px;
+  margin-top: 40px;
 }
 
 .argument {
-  display: flex;
-  align-content: flex-start;
-  flex-wrap: wrap;
   width: 290px;
-  margin: 0 10px;
+  text-align: center;
   box-sizing: border-box;
   .brd(2px);
-  background: #fff;
-  .activeShadowBig;
+  /*background: #fff;
+  .activeShadowBig;*/
   z-index: 1;
 }
 
 .argument__pic{
   display: block;
-  width: 100%;
-  height: 180px;
-  border-bottom: 1px solid @dividerColor;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  .brd(50%);
+  /*border-bottom: 1px solid @dividerColor;*/
   background-repeat: no-repeat;
-  background-position: 10%;
-  background-size: cover;
+  background-position: 50% 50%;
+  background-size: 60%;
+  background-color: #fff; 
+  .activeShadowBig;
 }
 
 .argument__pic--delivery{
-  background-image: url("../img/delivery-card.jpg");
+  background-image: url("../img/fast-delivery.svg");
 }
 
 .argument__pic--free{
-  background-image: url("../img/freepay.jpg");
+  background-image: url("../img/delivery-man.svg");
 }
 
 .argument__pic--low-price{
-  background-image: url("../img/lowprice.jpg");
+  background-image: url("../img/tag.svg");
 }
 
 .argument__title{
@@ -936,6 +942,7 @@ main{
 }
 
 .argument__footer {
+  margin-top: 10px;
   padding: 20px;
 }
 
@@ -1074,13 +1081,30 @@ main{
     width: 100%;
     margin-top: 10px;
   }
-  .argument,
+  .arguments{
+  	flex-wrap: wrap;
+  }
+  .argument{
+  	width: 100%;
+  	margin: 20px 0;
+  }
   .form__field--argument,
   .wrapper-for-button--argument{
     width: 30%;
   }
+  .argument__footer{
+  	display: flex;
+  	flex-wrap: wrap;
+	justify-content: center;
+  }
   .form--argument{
     max-width: 100%;
+  }
+  .argument__title{
+  	width: 100%;
+  }
+  .argument__description{
+  	max-width: 360px;
   }
 }
 
